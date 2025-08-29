@@ -17,14 +17,6 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
-    buildFeatures {
-        compose = true
-    }
-
-    composeOptions {
-        kotlinCompilerExtensionVersion = libs.versions.composeCompiler.get()
-    }
-
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -53,13 +45,6 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-
-    implementation(libs.compose.ui)
-    implementation(libs.compose.ui.tooling)
-    implementation(libs.compose.material)
-    implementation(libs.compose.preview)
-    implementation(libs.compose.runtime)
-    implementation(libs.compose.activity)
 
     implementation(libs.credentials)
     implementation(libs.googleid)
